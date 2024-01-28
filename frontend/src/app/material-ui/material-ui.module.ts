@@ -10,6 +10,9 @@ import { MatSelectModule } from '@angular/material/select';
 import { MatInputModule } from '@angular/material/input';
 import { MatTableModule } from '@angular/material/table';
 import { MatTabsModule } from '@angular/material/tabs';
+import { MatAutocompleteModule } from '@angular/material/autocomplete';
+import { MatChipsModule } from '@angular/material/chips';
+import { MatToolbarModule } from '@angular/material/toolbar';
 
 @NgModule({
   declarations: [],
@@ -25,6 +28,9 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatInputModule,
     MatTableModule,
     MatTabsModule,
+    MatAutocompleteModule,
+    MatChipsModule,
+    MatToolbarModule,
   ],
   exports: [
     MatIconModule,
@@ -37,6 +43,9 @@ import { MatTabsModule } from '@angular/material/tabs';
     MatInputModule,
     MatTableModule,
     MatTabsModule,
+    MatAutocompleteModule,
+    MatChipsModule,
+    MatToolbarModule,
   ],
 })
-export class MaterialUiModule { }
+export class MaterialUiModule {}
