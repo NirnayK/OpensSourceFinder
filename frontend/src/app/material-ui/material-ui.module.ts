@@ -13,6 +13,9 @@ import { MatTabsModule } from '@angular/material/tabs';
 import { MatAutocompleteModule } from '@angular/material/autocomplete';
 import { MatChipsModule } from '@angular/material/chips';
 import { MatToolbarModule } from '@angular/material/toolbar';
+import { MatCardModule } from '@angular/material/card';
+import { MatExpansionModule } from '@angular/material/expansion';
+import { MatSliderModule } from '@angular/material/slider';
 
 @NgModule({
   declarations: [],
@@ -31,6 +34,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatAutocompleteModule,
     MatChipsModule,
     MatToolbarModule,
+    MatCardModule,
+    MatExpansionModule,
+    MatSliderModule,
   ],
   exports: [
     MatIconModule,
@@ -46,6 +52,9 @@ import { MatToolbarModule } from '@angular/material/toolbar';
     MatAutocompleteModule,
     MatChipsModule,
     MatToolbarModule,
+    MatCardModule,
+    MatExpansionModule,
+    MatSliderModule,
   ],
 })
 export class MaterialUiModule {}

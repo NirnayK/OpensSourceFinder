@@ -11,9 +11,13 @@ import { MaterialUiModule } from './material-ui/material-ui.module';
 import { HeaderComponent } from './header/header.component';
 import { SearchbarComponent } from './searchbar/searchbar.component';
 import { FiltersComponent } from './filters/filters.component';
+import { HomeComponent } from './home/home.component';
+import { ProfileComponent } from './profile/profile.component';
+import { ItemCardComponent } from './item-card/item-card.component';
+import { LoginDialogComponent } from './login-dialog/login-dialog.component';
 
 @NgModule({
-  declarations: [AppComponent, HeaderComponent, SearchbarComponent, FiltersComponent],
+  declarations: [AppComponent, HeaderComponent, SearchbarComponent, FiltersComponent, HomeComponent, ProfileComponent, ItemCardComponent, LoginDialogComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,

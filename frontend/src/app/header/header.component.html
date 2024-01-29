@@ -1,41 +1,44 @@
 <mat-toolbar class="p-4 flex justify-between w-full">
   <div class="logo flex gap-2">
-    <div class="svg-icon w-8 h-8 bg-white rounded-lg">
-      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 256" id="code">
-        <rect class="w-8 h-8" fill="none"></rect>
-        <polyline
-          fill="none"
-          stroke="#000"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="24"
-          points="64 88 16 128 64 168"
-        ></polyline>
-        <polyline
-          fill="none"
-          stroke="#000"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="24"
-          points="192 88 240 128 192 168"
-        ></polyline>
-        <line
-          x1="160"
-          x2="96"
-          y1="40"
-          y2="216"
-          fill="none"
-          stroke="#000"
-          stroke-linecap="round"
-          stroke-linejoin="round"
-          stroke-width="24"
-        ></line>
-      </svg>
-    </div>
+    <svg
+      routerLink="/"
+      xmlns="http://www.w3.org/2000/svg"
+      class="w-8 h-8 bg-white rounded-lg hover:cursor-pointer"
+      viewBox="0 0 256 256"
+      id="code"
+    >
+      <rect class="w-8 h-8" fill="none"></rect>
+      <polyline
+        fill="none"
+        stroke="#000"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="24"
+        points="64 88 16 128 64 168"
+      ></polyline>
+      <polyline
+        fill="none"
+        stroke="#000"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="24"
+        points="192 88 240 128 192 168"
+      ></polyline>
+      <line
+        x1="160"
+        x2="96"
+        y1="40"
+        y2="216"
+        fill="none"
+        stroke="#000"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        stroke-width="24"
+      ></line>
+    </svg>
     <h1>OpenSourceAlternateFinder</h1>
   </div>
-
-  <button mat-mini-fab color="primary">
+  <button mat-mini-fab color="primary" routerLink="/profile">
     <mat-icon>person</mat-icon>
   </button>
 </mat-toolbar>

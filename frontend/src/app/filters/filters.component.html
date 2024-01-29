@@ -1,1 +1,74 @@
-<p>filters works!</p>
+<mat-card class="w-1/4">
+  <mat-card-header>
+    <mat-icon mat-card-avatar>filter_list</mat-icon>
+    <mat-card-title>Filters</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <mat-accordion>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title><mat-icon>star</mat-icon>Stars</mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-slider
+          min="0"
+          max="100000"
+          step="500"
+          showTickMarks
+          discrete
+          [displayWith]="formatLabel"
+        >
+          <input matSliderThumb />
+        </mat-slider>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title>
+            <mat-icon>fork_right</mat-icon>
+            Forks
+          </mat-panel-title>
+        </mat-expansion-panel-header>
+        <mat-slider
+          min="0"
+          max="100000"
+          step="500"
+          showTickMarks
+          discrete
+          [displayWith]="formatLabel"
+        >
+          <input matSliderThumb />
+        </mat-slider>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title> Language </mat-panel-title>
+        </mat-expansion-panel-header>
+        <span class="example-list-section">
+          <ul>
+            <li *ngFor="let language of languages">
+              <mat-checkbox>
+                {{ language }}
+              </mat-checkbox>
+            </li>
+          </ul>
+        </span>
+      </mat-expansion-panel>
+      <mat-expansion-panel>
+        <mat-expansion-panel-header>
+          <mat-panel-title> License </mat-panel-title>
+        </mat-expansion-panel-header>
+        <span class="example-list-section">
+          <ul>
+            <li *ngFor="let license of licenses">
+              <mat-checkbox>
+                {{ license }}
+              </mat-checkbox>
+            </li>
+          </ul>
+        </span>
+      </mat-expansion-panel>
+    </mat-accordion>
+  </mat-card-content>
+  <mat-card-actions class="mx-auto">
+    <button mat-raised-button color="warn">Reset</button>
+  </mat-card-actions>
+</mat-card>
