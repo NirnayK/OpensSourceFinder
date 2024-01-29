@@ -1,9 +1,21 @@
 
 from django.db import models
-from django.contrib.auth.models import User
+# from django.contrib.auth.models import User
 
 class Tag(models.Model):
-    name = models.CharField(max_length=100)
+    name = models.CharField(max_length=100, unique=True)
+
+    def __str__(self):
+        return self.name
+
+class Language(models.Model):
+    name = models.CharField(max_length=100, unique=True)
+
+    def __str__(self):
+        return self.name
+
+class License(models.Model):
+    name = models.CharField(max_length=100, unique=True)
 
     def __str__(self):
         return self.name
@@ -22,7 +34,7 @@ class Project(models.Model):
     def __str__(self):
         return self.name
 
-
+"""
 class UserProfile(models.Model):
     user = models.OneToOneField(User, on_delete=models.CASCADE)
     bookmarked_projects = models.ManyToManyField(Project)
@@ -41,3 +53,5 @@ class UserProfile(models.Model):
 
     def has_bookmarked_project(self, project):
         return self.bookmarked_projects.filter(id=project.id).exists()
+
+"""

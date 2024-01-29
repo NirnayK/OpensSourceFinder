@@ -11,7 +11,7 @@ def filter_json(data):
     return filtered_data
 
 
-def fetch(tags:list,query:str):
+def fetch(topics:list,query:str):
 
     url = 'https://api.github.com/search/repositories'
 
@@ -21,9 +21,9 @@ def fetch(tags:list,query:str):
         'order': 'desc'
     }
 
-    if len(tags) > 0:
-        tag_query = ' '.join([f'topic:{tag}' for tag in tags])
-        params['q'] = tag_query
+    if len(topics) > 0:
+        topic_query = ' '.join([f'topic:{topic}' for topic in topics])
+        params['q'] = topic_query
     if len(query) > 0:
         params['q'] += query
 

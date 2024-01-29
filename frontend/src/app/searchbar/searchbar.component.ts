@@ -1,5 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { SearchService } from '../search.service';
+import { BaseData } from '../base-data';
 
 @Component({
   selector: 'app-searchbar',
@@ -8,11 +9,11 @@ import { SearchService } from '../search.service';
 })
 export class SearchbarComponent {
   searchService: SearchService = inject(SearchService);
-  selectedOptions: string[] = [];
+  selectedOptions: BaseData[] = [];
   searchTerm = '';
-  values: string[] = this.searchService.values;
+  values: BaseData[] = this.searchService.tags;
 
-  selectOption(option: string): void {
+  selectOption(option: BaseData): void {
     const index = this.selectedOptions.indexOf(option);
     if (index === -1) {
       // Option is not selected, add it
@@ -29,17 +30,17 @@ export class SearchbarComponent {
     this.searchTerm = '';
   }
 
-  search(): void {
-    if (this.searchTerm === '' && this.selectedOptions.length === 0) {
-      return;
-    }
+  // search(): void {
+  //   if (this.searchTerm === '' && this.selectedOptions.length === 0) {
+  //     return;
+  //   }
 
-    this.searchService.setValues({
-      search: this.searchTerm,
-      selectedTags: this.selectedOptions,
-    });
-    this.searchService.getResults();
-    console.log('Performing search...');
-    console.log('Selected options:', this.selectedOptions);
-  }
+  //   this.searchService.setValues({
+  //     search: this.searchTerm,
+  //     selectedTags: this.selectedOptions,
+  //   });
+  //   this.searchService.getResults();
+  //   console.log('Performing search...');
+  //   console.log('Selected options:', this.selectedOptions);
+  // }
 }

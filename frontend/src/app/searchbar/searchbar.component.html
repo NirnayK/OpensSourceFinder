@@ -4,15 +4,14 @@
   using custom tags.
 </h1>
 
-<!-- Predefined options as chips -->
 <div class="flex flex-wrap gap-2 mb-2">
   <mat-chip-option
     *ngFor="let item of values"
-    [value]="item"
+    [value]="item.id"
     [selected]="selectedOptions.includes(item)"
     (click)="selectOption(item)"
   >
-    {{ item }}
+    {{ item.name }}
   </mat-chip-option>
 </div>
 <form class="flex items-center gap-2">
@@ -20,9 +19,9 @@
     <mat-label>Search Fields</mat-label>
     <input matInput placeholder="Enter search terms..." />
   </mat-form-field>
-  <button mat-raised-button color="primary" (click)="search()">
+  <!-- <button mat-raised-button color="primary" (click)="search()">
     Search <mat-icon>search</mat-icon>
-  </button>
+  </button> -->
   <button mat-raised-button color="warn" (click)="clear()" type="reset">
     Clear<mat-icon>delete</mat-icon>
   </button>
