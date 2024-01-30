@@ -1,9 +1,9 @@
 from rest_framework import serializers
-from .models import Tag, Language, License
+from .models import Topic, Language, License
 
-class TagSerializer(serializers.ModelSerializer):
+class TopicSerializer(serializers.ModelSerializer):
     class Meta:
-        model = Tag
+        model = Topic
         fields = '__all__'
 
 class LanguageSerializer(serializers.ModelSerializer):

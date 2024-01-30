@@ -1,10 +1,10 @@
 from rest_framework import generics
-from .models import  Language, License, Tag
-from .serializers import LanguageSerializer, LicenseSerializer, TagSerializer
+from .models import  Language, License, Topic
+from .serializers import LanguageSerializer, LicenseSerializer, TopicSerializer
 
-class TagListAPIView(generics.ListAPIView):
-    queryset = Tag.objects.all()
-    serializer_class = TagSerializer
+class TopicListAPIView(generics.ListAPIView):
+    queryset = Topic.objects.all()
+    serializer_class = TopicSerializer
 
 class LanguageListAPIView(generics.ListAPIView):
     queryset = Language.objects.all()
