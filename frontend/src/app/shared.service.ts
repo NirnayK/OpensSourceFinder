@@ -7,12 +7,12 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class SharedService {
-  readonly APIUrl = 'http://localhost:8000/api';
+  readonly APIUrl = 'http://127.0.0.1:8000/api';
 
   constructor(private http: HttpClient) {}
 
   getTags(): Observable<BaseData[]> {
-    return this.http.get<BaseData[]>(this.APIUrl + '/tags');
+    return this.http.get<BaseData[]>(this.APIUrl + '/topics');
   }
 
   getLanguages(): Observable<BaseData[]> {
